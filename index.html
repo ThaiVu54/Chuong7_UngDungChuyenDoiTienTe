@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        #button {
+            background-color: blueviolet;
+            color: white ;
+        }
+    </style>
+</head>
+<body>
+<form style="margin-left: 30px">
+        <lable>&emsp;&emsp;&emsp;Amount</lable>
+        <lable>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;From Crurrency</lable>
+        <lable>&emsp;&emsp;To Currency</lable>
+    <br>
+    <input style="" type="text" id="dauvao" value="">
+
+    <select style="margin-left: 40px;width: 100px" name="" id="chon1" >
+        <option value="VND">VietNam</option>
+        <option value="USD">England</option>
+    </select>
+    <select style="margin-left: 40px;width: 100px " name="" id="chon2">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+        <button style="margin-left: 20px " id="button" onclick="convertMoney()">Convert</button>
+</form>
+<script>
+    function convertMoney(){
+        let giaTriVao = document.getElementById('dauvao').value;
+        let chon1 = document.getElementById('chon1').value;
+        let chon2 = document.getElementById('chon2').value;
+        if (chon1 == chon2){
+            alert(giaTriVao);
+        }else if(chon1 == "VND" && chon2 == "USD" ){
+            alert(giaTriVao/23000)
+        }else if(chon1 == "USD" && chon2 == "VND"){
+            alert(giaTriVao*23000)
+        }
+    }
+</script>
+</body>
+</html>
